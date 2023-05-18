@@ -22,13 +22,16 @@ export default function App() {
     console.log(ctx.measureText(txt).width)
     console.log(w)
     console.log(h / w)
-    ctx.fillText(txt, 5, 50)
+    ctx.fillText(txt, 0, h)
   }, [])
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-      <canvas width="300px" height="200px" ref={tmc}></canvas>
-    </div>
+    <canvas
+      style={{
+        width: '100vw',
+        height: '100vh',
+        background: 'gold'
+      }}
+      ref={tmc}
+    ></canvas>
   )
 }
